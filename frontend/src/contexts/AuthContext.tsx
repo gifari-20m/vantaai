@@ -17,21 +17,58 @@ const AuthContext = createContext<AuthContextValue>({
 });
 
 export function AuthProvider({ children }: { children: ReactNode }) {
-  const [session, setSession] = useState<Session | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [session, setSession] = useState<Session | null>(() => {
+    // Default to a mock session for local development
+    return {
+      access_token: "mock-token",
+      refresh_token: "mock-refresh",
+      expires_in: 3600,
+      token_type: "bearer",
+      user: {
+        id: "test-user",
+        email: "test-user@vanta.ai",
+        created_at: new Date().toISOString(),
+        aud: "authenticated",
+        role: "authenticated",
+        app_metadata: {},
+        user_metadata: { full_name: "Test User" },
+      } as any
+    };
+  });
+  const [loading, setLoading] = useState(false);
+
+  const isDummy = import.meta.env.VITE_SUPABASE_URL?.includes('dummyprojecturl');
 
   useEffect(() => {
-    // Set up listener FIRST, then check existing session
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, s) => {
-      setSession(s);
+    if (isDummy) {
       setLoading(false);
-    });
-    supabase.auth.getSession().then(({ data }) => {
-      setSession(data.session);
+      return;
+    }
+
+    try {
+      // Set up listener FIRST, then check existing session
+      const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, s) => {
+        if (s) {
+          setSession(s);
+        } else {
+          setSession(null);
+        }
+        setLoading(false);
+      });
+      supabase.auth.getSession().then(({ data }) => {
+        if (data.session) {
+          setSession(data.session);
+        }
+        setLoading(false);
+      }).catch(() => {
+        setLoading(false);
+      });
+      return () => subscription.unsubscribe();
+    } catch (e) {
+      console.warn("Supabase auth is disabled or misconfigured, using local mock session:", e);
       setLoading(false);
-    });
-    return () => subscription.unsubscribe();
-  }, []);
+    }
+  }, [isDummy]);
 
   return (
     <AuthContext.Provider
@@ -40,7 +77,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         session,
         loading,
         signOut: async () => {
-          await supabase.auth.signOut();
+          if (!isDummy) {
+            try {
+              await supabase.auth.signOut();
+            } catch (e) {
+              // ignore
+            }
+          }
+          setSession(null);
         },
       }}
     >

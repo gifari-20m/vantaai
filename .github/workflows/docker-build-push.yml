@@ -36,5 +36,5 @@ jobs:
           file: ./runpod-serverless-worker/Dockerfile
           push: true
           tags: |
-            ghcr.io/agentanik/vantaai/wan22-serverless:latest
-            ghcr.io/agentanik/vantaai/wan22-serverless:${{ github.sha }}
+            ghcr.io/${{ github.repository }}/wan22-serverless:latest
+            ghcr.io/${{ github.repository }}/wan22-serverless:${{ github.sha }}

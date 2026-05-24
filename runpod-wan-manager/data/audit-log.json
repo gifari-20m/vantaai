@@ -1736,5 +1736,422 @@
       "newBalance": 999938.7973
     },
     "timestamp": "2026-05-24T16:37:59.241Z"
+  },
+  {
+    "id": "audit_3fbbee7ed56f4ef5",
+    "action": "credits_reserved",
+    "userId": "local",
+    "jobId": "job_7a0a132fdd374682",
+    "details": {
+      "credits": 10,
+      "newBalance": 999928.7973
+    },
+    "timestamp": "2026-05-24T19:35:22.577Z"
+  },
+  {
+    "id": "audit_2c6141f48cef4749",
+    "action": "job_created",
+    "userId": "local",
+    "jobId": "job_7a0a132fdd374682",
+    "details": {
+      "modelId": "wan2.2-ti2v-5b",
+      "priority": "medium"
+    },
+    "timestamp": "2026-05-24T19:35:22.580Z"
+  },
+  {
+    "id": "audit_5fc27e8aa5304048",
+    "action": "job_failed",
+    "userId": "local",
+    "jobId": "job_7a0a132fdd374682",
+    "details": {
+      "error": "RunPod API Error (HTTP 500): start pod: pod not found"
+    },
+    "timestamp": "2026-05-24T19:35:24.137Z"
+  },
+  {
+    "id": "audit_c5f93e39b2f3413e",
+    "action": "job_failed",
+    "userId": "local",
+    "jobId": "job_7a0a132fdd374682",
+    "details": {
+      "error": "RunPod API Error (HTTP 500): start pod: pod not found"
+    },
+    "timestamp": "2026-05-24T19:35:27.362Z"
+  },
+  {
+    "id": "audit_9a9ad4436b8a4528",
+    "action": "job_failed",
+    "userId": "local",
+    "jobId": "job_7a0a132fdd374682",
+    "details": {
+      "error": "RunPod API Error (HTTP 500): start pod: pod not found"
+    },
+    "timestamp": "2026-05-24T19:35:29.351Z"
+  },
+  {
+    "id": "audit_c6a9abc9abe0403b",
+    "action": "credits_refunded",
+    "userId": "local",
+    "jobId": "job_7a0a132fdd374682",
+    "details": {
+      "credits": 10,
+      "newBalance": 999938.7973
+    },
+    "timestamp": "2026-05-24T19:35:30.002Z"
+  },
+  {
+    "id": "audit_d756adc1ebb34a6b",
+    "action": "credits_reserved",
+    "userId": "local",
+    "jobId": "job_fd071f2ce0c944f2",
+    "details": {
+      "credits": 10,
+      "newBalance": 999928.7973
+    },
+    "timestamp": "2026-05-24T19:39:53.904Z"
+  },
+  {
+    "id": "audit_81997e021f5946aa",
+    "action": "job_created",
+    "userId": "local",
+    "jobId": "job_fd071f2ce0c944f2",
+    "details": {
+      "modelId": "wan2.2-ti2v-5b",
+      "priority": "medium"
+    },
+    "timestamp": "2026-05-24T19:39:53.906Z"
+  },
+  {
+    "id": "audit_d0f5552c47474f11",
+    "action": "job_failed",
+    "userId": "local",
+    "jobId": "job_fd071f2ce0c944f2",
+    "details": {
+      "error": "RunPod API Error (HTTP 500): start pod: There are not enough free GPUs on the host machine to start this pod."
+    },
+    "timestamp": "2026-05-24T19:39:56.870Z"
+  },
+  {
+    "id": "audit_53de7da302dd4518",
+    "action": "gpu_stop_initiated",
+    "userId": "local",
+    "jobId": "job_fd071f2ce0c944f2",
+    "details": {
+      "providerId": "comfyui",
+      "instanceId": "iekamfpjo8bjeg"
+    },
+    "timestamp": "2026-05-24T19:39:57.792Z"
+  },
+  {
+    "id": "audit_8c5713ba89cc4504",
+    "action": "job_failed",
+    "userId": "local",
+    "jobId": "job_fd071f2ce0c944f2",
+    "details": {
+      "error": "RunPod API Error (HTTP 500): start pod: There are not enough free GPUs on the host machine to start this pod."
+    },
+    "timestamp": "2026-05-24T19:40:00.169Z"
+  },
+  {
+    "id": "audit_7538eb7a61cc4532",
+    "action": "gpu_stop_initiated",
+    "userId": "local",
+    "jobId": "job_fd071f2ce0c944f2",
+    "details": {
+      "providerId": "comfyui",
+      "instanceId": "iekamfpjo8bjeg"
+    },
+    "timestamp": "2026-05-24T19:40:01.091Z"
+  },
+  {
+    "id": "audit_1435b39f70124fac",
+    "action": "job_failed",
+    "userId": "local",
+    "jobId": "job_fd071f2ce0c944f2",
+    "details": {
+      "error": "RunPod API Error (HTTP 500): start pod: There are not enough free GPUs on the host machine to start this pod."
+    },
+    "timestamp": "2026-05-24T19:40:02.229Z"
+  },
+  {
+    "id": "audit_a5b8f166f44f45dc",
+    "action": "gpu_stop_initiated",
+    "userId": "local",
+    "jobId": "job_fd071f2ce0c944f2",
+    "details": {
+      "providerId": "comfyui",
+      "instanceId": "iekamfpjo8bjeg"
+    },
+    "timestamp": "2026-05-24T19:40:03.135Z"
+  },
+  {
+    "id": "audit_e8c7e66e58524802",
+    "action": "credits_refunded",
+    "userId": "local",
+    "jobId": "job_fd071f2ce0c944f2",
+    "details": {
+      "credits": 10,
+      "newBalance": 999938.7973
+    },
+    "timestamp": "2026-05-24T19:40:03.140Z"
+  },
+  {
+    "id": "audit_f4d2abf29aa6460e",
+    "action": "credits_reserved",
+    "userId": "local",
+    "jobId": "job_28d6077769a84795",
+    "details": {
+      "credits": 10,
+      "newBalance": 999928.7973
+    },
+    "timestamp": "2026-05-24T19:48:59.345Z"
+  },
+  {
+    "id": "audit_cbe180c1f2794da1",
+    "action": "job_created",
+    "userId": "local",
+    "jobId": "job_28d6077769a84795",
+    "details": {
+      "modelId": "wan2.2-ti2v-5b",
+      "priority": "medium"
+    },
+    "timestamp": "2026-05-24T19:48:59.347Z"
+  },
+  {
+    "id": "audit_331e9b8b0ff3485b",
+    "action": "gpu_start_initiated",
+    "userId": "local",
+    "jobId": "job_28d6077769a84795",
+    "details": {
+      "providerId": "comfyui",
+      "instanceId": "iekamfpjo8bjeg"
+    },
+    "timestamp": "2026-05-24T19:49:00.595Z"
+  },
+  {
+    "id": "audit_53a3f0f34b2640b3",
+    "action": "credits_reserved",
+    "userId": "local",
+    "jobId": "job_97541110949b4ac4",
+    "details": {
+      "credits": 10,
+      "newBalance": 999918.7973
+    },
+    "timestamp": "2026-05-24T19:50:56.697Z"
+  },
+  {
+    "id": "audit_1a3eef00ad7f429e",
+    "action": "job_created",
+    "userId": "local",
+    "jobId": "job_97541110949b4ac4",
+    "details": {
+      "modelId": "wan2.2-ti2v-5b",
+      "priority": "medium"
+    },
+    "timestamp": "2026-05-24T19:50:56.699Z"
+  },
+  {
+    "id": "audit_49370e2ac96d4c6e",
+    "action": "gpu_start_initiated",
+    "userId": "local",
+    "jobId": "job_97541110949b4ac4",
+    "details": {
+      "providerId": "comfyui",
+      "instanceId": "iekamfpjo8bjeg"
+    },
+    "timestamp": "2026-05-24T19:50:59.092Z"
+  },
+  {
+    "id": "audit_b3473f73914d4674",
+    "action": "job_failed",
+    "userId": "local",
+    "jobId": "job_28d6077769a84795",
+    "details": {
+      "error": "ComfyUI container did not become responsive on proxy endpoint before timeout (300 seconds)."
+    },
+    "timestamp": "2026-05-24T19:54:04.045Z"
+  },
+  {
+    "id": "audit_9b2d0bb8ebce4dc0",
+    "action": "gpu_stop_initiated",
+    "userId": "local",
+    "jobId": "job_28d6077769a84795",
+    "details": {
+      "providerId": "comfyui",
+      "instanceId": "iekamfpjo8bjeg"
+    },
+    "timestamp": "2026-05-24T19:54:05.904Z"
+  },
+  {
+    "id": "audit_b54fa198e2a84456",
+    "action": "gpu_start_initiated",
+    "userId": "local",
+    "jobId": "job_28d6077769a84795",
+    "details": {
+      "providerId": "comfyui",
+      "instanceId": "iekamfpjo8bjeg"
+    },
+    "timestamp": "2026-05-24T19:54:07.809Z"
+  },
+  {
+    "id": "audit_57286888d08d4c2c",
+    "action": "job_failed",
+    "userId": "local",
+    "jobId": "job_97541110949b4ac4",
+    "details": {
+      "error": "ComfyUI container did not become responsive on proxy endpoint before timeout (300 seconds)."
+    },
+    "timestamp": "2026-05-24T19:55:59.808Z"
+  },
+  {
+    "id": "audit_2922a7d53a934518",
+    "action": "gpu_stop_initiated",
+    "userId": "local",
+    "jobId": "job_97541110949b4ac4",
+    "details": {
+      "providerId": "comfyui",
+      "instanceId": "iekamfpjo8bjeg"
+    },
+    "timestamp": "2026-05-24T19:56:00.699Z"
+  },
+  {
+    "id": "audit_1eb80b144cf447f9",
+    "action": "gpu_start_initiated",
+    "userId": "local",
+    "jobId": "job_97541110949b4ac4",
+    "details": {
+      "providerId": "comfyui",
+      "instanceId": "iekamfpjo8bjeg"
+    },
+    "timestamp": "2026-05-24T19:56:02.385Z"
+  },
+  {
+    "id": "audit_32779c1a9921470e",
+    "action": "job_failed",
+    "userId": "local",
+    "jobId": "job_28d6077769a84795",
+    "details": {
+      "error": "ComfyUI container did not become responsive on proxy endpoint before timeout (300 seconds)."
+    },
+    "timestamp": "2026-05-24T19:59:13.573Z"
+  },
+  {
+    "id": "audit_1359c2bcfcff48ac",
+    "action": "gpu_stop_initiated",
+    "userId": "local",
+    "jobId": "job_28d6077769a84795",
+    "details": {
+      "providerId": "comfyui",
+      "instanceId": "iekamfpjo8bjeg"
+    },
+    "timestamp": "2026-05-24T19:59:15.473Z"
+  },
+  {
+    "id": "audit_833355f9cfb348be",
+    "action": "gpu_start_initiated",
+    "userId": "local",
+    "jobId": "job_28d6077769a84795",
+    "details": {
+      "providerId": "comfyui",
+      "instanceId": "iekamfpjo8bjeg"
+    },
+    "timestamp": "2026-05-24T19:59:16.990Z"
+  },
+  {
+    "id": "audit_b1bcf88aad0f4aa4",
+    "action": "job_failed",
+    "userId": "local",
+    "jobId": "job_97541110949b4ac4",
+    "details": {
+      "error": "ComfyUI container did not become responsive on proxy endpoint before timeout (300 seconds)."
+    },
+    "timestamp": "2026-05-24T20:01:04.134Z"
+  },
+  {
+    "id": "audit_d0e8cb05316c4253",
+    "action": "gpu_stop_initiated",
+    "userId": "local",
+    "jobId": "job_97541110949b4ac4",
+    "details": {
+      "providerId": "comfyui",
+      "instanceId": "iekamfpjo8bjeg"
+    },
+    "timestamp": "2026-05-24T20:01:05.970Z"
+  },
+  {
+    "id": "audit_2c434f7965a4468a",
+    "action": "gpu_start_initiated",
+    "userId": "local",
+    "jobId": "job_97541110949b4ac4",
+    "details": {
+      "providerId": "comfyui",
+      "instanceId": "iekamfpjo8bjeg"
+    },
+    "timestamp": "2026-05-24T20:01:07.587Z"
+  },
+  {
+    "id": "audit_96b0096e92f04352",
+    "action": "job_failed",
+    "userId": "local",
+    "jobId": "job_28d6077769a84795",
+    "details": {
+      "error": "ComfyUI container did not become responsive on proxy endpoint before timeout (300 seconds)."
+    },
+    "timestamp": "2026-05-24T20:04:18.996Z"
+  },
+  {
+    "id": "audit_1e3d574e8a92489b",
+    "action": "gpu_stop_initiated",
+    "userId": "local",
+    "jobId": "job_28d6077769a84795",
+    "details": {
+      "providerId": "comfyui",
+      "instanceId": "iekamfpjo8bjeg"
+    },
+    "timestamp": "2026-05-24T20:04:20.762Z"
+  },
+  {
+    "id": "audit_735afadcbe8f481f",
+    "action": "credits_refunded",
+    "userId": "local",
+    "jobId": "job_28d6077769a84795",
+    "details": {
+      "credits": 10,
+      "newBalance": 999928.7973
+    },
+    "timestamp": "2026-05-24T20:04:20.767Z"
+  },
+  {
+    "id": "audit_bfebf4e8da074a87",
+    "action": "job_failed",
+    "userId": "local",
+    "jobId": "job_97541110949b4ac4",
+    "details": {
+      "error": "ComfyUI container did not become responsive on proxy endpoint before timeout (300 seconds)."
+    },
+    "timestamp": "2026-05-24T20:06:10.238Z"
+  },
+  {
+    "id": "audit_e0c5ecb1698d4c05",
+    "action": "gpu_stop_initiated",
+    "userId": "local",
+    "jobId": "job_97541110949b4ac4",
+    "details": {
+      "providerId": "comfyui",
+      "instanceId": "iekamfpjo8bjeg"
+    },
+    "timestamp": "2026-05-24T20:06:11.966Z"
+  },
+  {
+    "id": "audit_696c16472cc34a15",
+    "action": "credits_refunded",
+    "userId": "local",
+    "jobId": "job_97541110949b4ac4",
+    "details": {
+      "credits": 10,
+      "newBalance": 999938.7973
+    },
+    "timestamp": "2026-05-24T20:06:11.970Z"
   }
 ]

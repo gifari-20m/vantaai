@@ -35,6 +35,9 @@ function AuthPage() {
   const [busy, setBusy] = useState(false);
 
   // If already signed in, bounce to redirect target
+  const isDummy = import.meta.env.VITE_SUPABASE_URL?.includes('dummy') || !import.meta.env.VITE_SUPABASE_URL;
+
+  // If already signed in, bounce to redirect target
   useEffect(() => {
     if (!authLoading && user) {
       navigate({ to: redirect || "/" });
@@ -45,6 +48,11 @@ function AuthPage() {
     e.preventDefault();
     setBusy(true);
     try {
+      if (isDummy) {
+        toast.success("Welcome (Mock Mode)");
+        navigate({ to: redirect || "/" });
+        return;
+      }
       if (mode === "signup") {
         if (name.trim().length < 2) throw new Error("Please enter your full name");
         const { error } = await supabase.auth.signUp({
@@ -75,6 +83,11 @@ function AuthPage() {
   const onGoogle = async () => {
     setBusy(true);
     try {
+      if (isDummy) {
+        toast.success("Welcome (Mock Mode)");
+        navigate({ to: redirect || "/" });
+        return;
+      }
       const result = await lovable.auth.signInWithOAuth("google", {
         redirect_uri: window.location.origin + (redirect || "/"),
       });
