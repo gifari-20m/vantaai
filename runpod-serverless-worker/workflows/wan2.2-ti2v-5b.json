@@ -1,0 +1,82 @@
+{
+  "1": {
+    "inputs": {
+      "unet_name": "wan2.2_ti2v_5B_fp16.safetensors",
+      "weight_dtype": "fp8_e4m3fn"
+    },
+    "class_type": "UNETLoader"
+  },
+  "2": {
+    "inputs": {
+      "vae_name": "wan2.2_vae.safetensors"
+    },
+    "class_type": "VAELoader"
+  },
+  "3": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan"
+    },
+    "class_type": "CLIPLoader"
+  },
+  "4": {
+    "inputs": {
+      "text": "cinematic futuristic city at night",
+      "clip": [ "3", 0 ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "5": {
+    "inputs": {
+      "text": "blurry, distorted",
+      "clip": [ "3", 0 ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "6": {
+    "inputs": {
+      "width": 704,
+      "height": 704,
+      "batch_size": 16
+    },
+    "class_type": "EmptyLatentImage"
+  },
+  "7": {
+    "inputs": {
+      "seed": 42,
+      "steps": 20,
+      "cfg": 6.0,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "denoise": 1.0,
+      "model": [ "1", 0 ],
+      "positive": [ "4", 0 ],
+      "negative": [ "5", 0 ],
+      "latent_image": [ "6", 0 ]
+    },
+    "class_type": "KSampler"
+  },
+  "8": {
+    "inputs": {
+      "samples": [ "7", 0 ],
+      "vae": [ "2", 0 ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "9": {
+    "inputs": {
+      "fps": 16,
+      "images": [ "8", 0 ]
+    },
+    "class_type": "CreateVideo"
+  },
+  "10": {
+    "inputs": {
+      "filename_prefix": "wan_test",
+      "format": "mp4",
+      "codec": "h264",
+      "video": [ "9", 0 ]
+    },
+    "class_type": "SaveVideo"
+  }
+}
